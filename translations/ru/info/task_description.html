@@ -12,47 +12,37 @@
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Входные данные: </strong> Высота зданий как двумерный массив. Высота здания определяется как столбец в массиве.
+    <strong>Входные данные:</strong> Высота зданий как двумерный {% if is_js %}массив{% else %}список{% endif %}. Высота здания определяется как столбец в {% if is_js %}массиве{% else %}списке{% endif %}.
 </p>
 
 <p>
-    <strong>Выходные данные: </strong> Номер дома и его высота как список(list) целых чисел (Примечание: в этой задаче, как и в реальной жизни, номера домов начинаются с "1", а не с "0") 
+    <strong>Выходные данные:</strong> Номер дома и его высота как {% if is_js %}массив{% else %}список{% endif %} целых чисел (Примечание: в этой задаче, как и в реальной жизни, номера домов начинаются с "1", а не с "0") 
 </p>
 
 
 <!-- Put some usage examples -->
 <div class="for_info_only">
-<p>
-<strong>Пример:</strong>
-</p>
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">highestBuilding([[0, 0, 1, 0],
-                 [1, 0, 1, 1],
-                 [1, 1, 1, 1],
-                 [1, 1, 1, 1]]) == [3, 4] 
-// здание №3 самое высокое, его высота = 4
-</pre>
-{% else %}
-<pre class="brush: python">highest_building([[0, 0, 1, 0],
-                  [1, 0, 1, 1],
-                  [1, 1, 1, 1],
-                  [1, 1, 1, 1]]) == [3, 4]
-# здание №3 самое высокое, его высота = 4
-</pre>
-{% endif %}
+    <p>
+    <strong>Примеры:</strong>
+    </p>
+    <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <!-- Here you can explain how it can be used in development and what is usage of this. -->
 <!-- The section is optional -->
 <p class="for_info_only">
-    <strong>Как это используется: </strong>
-    Работа с двумерными массивами - очень важный навык в жизни программиста.
+    <strong>Как это используется:</strong>
+    <i>
+        Работа с двумерными массивами - очень важный навык в жизни программиста.
+    </i>
 </p>
 
 <!-- Here you can explain some constraints for input-->
 <!-- The section is optional -->
-<p><strong>Предусловия</strong>:<br>
-    array width <= 10<br>
-    array height <= 10<br>
-    В каждом массиве будет только 1 самое высокое здание
+<p><strong>Предусловия:</strong>
+    <ul>
+        <li><i>array width <= 10;</i></li>
+        <li><i>array height <= 10;</i></li>
+        <li><i>в каждом массиве будет только 1 самое высокое здание.</i></li>
+    </ul>
 </p>
