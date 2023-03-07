@@ -1,0 +1,47 @@
+<!-- Describe task in general -->
+
+<p>
+    Головний архітектор міста хоче побудувати нову найвищу будівлю.<br>
+    Ти маєш допомогти йому знайти поточну найвищу будівлю в місті.
+</p>
+
+<p style="text-align: center;">
+    <img  title="The highest building" src="{{MEDIA}}example.jpg" alt="example" style="max-height: 283px"/>
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Вхідні дані:</strong> Будівлі як двовимірний {% if is_js %}масив{% else %}список{% endif %}. Кожна будівля це колонка в {% if is_js %}масиві{% else %}списку{% endif %}.
+</p>
+
+<p>
+    <strong>Вихідна дані:</strong> Номер найвищої будівлі і її висота як {% if is_js %}масив{% else %}список{% endif %} цілих чисел (Важливо: у цьому завданні, як і в реальному житті, номери будинків починаються з "1", а не "0"). 
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+    <strong>Приклади:</strong>
+    </p>
+    <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>Сфера застосування:</strong>
+    <i>
+        Кожен справжній програміст повинен знати, як працювати з двовимірними {% if is_js %}масивами{% else %}списками{% endif %}.
+    </i>
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>Передумови:</strong>
+    <ul>
+        <li><i>array width <= 10;</i></li>
+        <li><i>array height <= 10;</i></li>
+        <li><i>є лише одна найвища будівля в кожному завданні.</i></li>
+    </ul>
+</p>
